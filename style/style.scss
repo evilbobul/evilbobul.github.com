@@ -1,8 +1,9 @@
-html, body, div, p, a,ul, li, header
+html, body, div, p, a,ul, li, header, h2, span
 {
     margin:0;
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
 body
 {
@@ -12,10 +13,7 @@ header
 {
     width:100%;
     height:30px;
-    padding-top: 0;
-    padding-bottom: 0;
     background-color:#333;
-
 }
 #leftTop
 {
@@ -30,59 +28,42 @@ header
     width:530px;
     list-style-type:none;
     padding:5px 0 0 0;
-    /*margin-left: 5px;*/
     color: #999;
-    font-size: 13px;
     float:left;
     border-top: 2px solid transparent;
-}
-#menu li
-{
-    width:548px;
-    display:inline;
-    padding:0;
-    margin:0;
-}
-
-#menu li a:link, #menu li a:visited
-{
-    width:548px;
-    text-decoration:none;
-    color: #CCCCCC;
-    background-color:#333;
-    padding:5px 5px 6px 5px;
-    border-top:2px solid #333;
-    /*border:1px solid red;*/
-    margin:0;
-
-}
-#menu li a:hover
-{
-    text-decoration:none;
-    color: #CCCCCC;
-    background-color:#666666;
-    padding:5px 5px 6px 5px;
-    border-top:2px solid #666666;
-}
-
-#menu li a.active1:link, #menu li a.active1:visited
-{
-    width:548px;
-    text-decoration:none;
-    color: white;
-    font-weight: bold;
-    background-color:#333;
-    padding:5px 5px 6px 5px;
-    border-top:2px solid #DD4B39;
-}
-#menu li a.active1:hover
-{
-    text-decoration:none;
-    color: white;
-    font-weight: bold;
-    background-color:#666666;
-    padding:5px 5px 6px 5px;
-    border-top:2px solid #DD4B39;
+    li
+    {
+        width:548px;
+        display:inline;
+        padding:0;
+        margin:0;
+        &a:link, &a:visited
+        {
+            width:548px;
+            text-decoration:none;
+            color: #CCCCCC;
+            background-color:#333;
+            padding:5px 5px 6px 5px;
+            border-top:2px solid #333;
+            margin:0;
+            &a:hover
+            {
+                background-color:#666666;
+                border-top:2px solid #666666;
+            }
+        }
+        &a.active1:link, &a.active1:visited
+        {
+            color: white;
+            font-weight: bold;
+            border-top:2px solid #DD4B39;
+            &a.active1:hover
+            {
+                background-color:#666666;
+                border-top:2px solid #DD4B39;
+            }
+        }
+    }
 }
 #rightTop
 {
@@ -91,56 +72,45 @@ header
     float:right;
     margin-right: 5px;
 }
-a.optBut:link, a.optBut:visited
+a.optBut:link
 {
     width:28px;
     height:29px;
     float:right;
     background:url(img/but.gif);
-}
-a.optBut:hover
+    a.optBut:hover
 {
-    width:28px;
-    height:29px;
-    float:right;
     background:url(img/buthover.gif);
-}
+}}
 #grad
 {
     width:1px;
     height:29px;
     float:right;
-    background: #7d7e7d; /* Old browsers */
-    background: -moz-linear-gradient(top, #7d7e7d 0%, #2f2f2f 0%, #5e5e5e 49%, #2d2d2d 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(0%,#2f2f2f), color-stop(49%,#5e5e5e), color-stop(100%,#2d2d2d)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #7d7e7d 0%,#2f2f2f 0%,#5e5e5e 49%,#2d2d2d 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #7d7e7d 0%,#2f2f2f 0%,#5e5e5e 49%,#2d2d2d 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #7d7e7d 0%,#2f2f2f 0%,#5e5e5e 49%,#2d2d2d 100%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#2d2d2d',GradientType=0 ); /* IE6-9 */
+    background: #7d7e7d;
+    background: -moz-linear-gradient(top, #7d7e7d 0%, #2f2f2f 0%, #5e5e5e 49%, #2d2d2d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(0%,#2f2f2f), color-stop(49%,#5e5e5e), color-stop(100%,#2d2d2d));
+    background: -o-linear-gradient(top, #7d7e7d 0%,#2f2f2f 0%,#5e5e5e 49%,#2d2d2d 100%);
+    background: -ms-linear-gradient(top, #7d7e7d 0%,#2f2f2f 0%,#5e5e5e 49%,#2d2d2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#2d2d2d',GradientType=0 );
 }
 #login
 {
     width:200px;
     height:29px;
     float:right;
-    font-size: 13px;
     text-align:right;
     padding-top: 7px;
-}
-
-#login p a:link, #login p a:visited
-{
+    p a:link, #login p a:visited
+    {
     text-decoration:none;
     color: #CCCCCC;
     padding:7px 5px 6px 5px;
     text-align:right;
-}
-#login p a:hover
-{
-    text-decoration:none;
-    color: #CCCCCC;
-    background-color:#666;
-    padding:7px 5px 6px 5px;
+        p a:hover{
+        background-color:#666;
+        }
+    }
 }
 #main
 {
@@ -171,7 +141,6 @@ a.optBut:hover
     border: 0;
     display:none;
 }
-
 #field
 {
     height:24px;
@@ -184,7 +153,6 @@ a.optBut:hover
     float:left;
     background-color: white;
 }
-
 #field1
 {
     height:20px;
@@ -192,17 +160,6 @@ a.optBut:hover
     border:0px;
     float:left;
     outline: none;
-}
-#field1 input:focus
-{
-    border:0px;
-    border-style:none;
-    /*border:1px solid #9BCDFF;*/
-}
-#field1 input:hover
-{
-    border:0px;
-
 }
 #keyboard
 {
@@ -215,18 +172,14 @@ a.optBut:hover
     border: 0;
     display:block;
 }
-
 #field:focus
 {
     border:1px solid #9BCDFF;
-
 }
 #field:hover
 {
     border:1px solid #666;
-
 }
-
 a.search:link, a.search:visited
 {
     cursor: default;
@@ -236,12 +189,11 @@ a.search:link, a.search:visited
     float:left;
     margin-top:20px;
     margin-left: 16px;
-}
-a.search:hover
-{
-    cursor: default;
+    a.search:hover
+    {
     background:url(img/searchbuthover.gif);
     box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    }
 }
 #MainHead
 {
@@ -264,8 +216,6 @@ a.search:hover
     width:450px;
     height:30px;
     color: #999999;
-    /*border:1px solid red;*/
-    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 20px;
     float:left;
@@ -288,62 +238,37 @@ aside
     width:190px;
     height:220px;
     list-style-type:none;
-
-}
-#menu2 li
-{
-    width:181px;
-    height:30px;
-    font-size: 13px;
-    /*padding-top: 5px;*/
-    /*padding-bottom: 5px;*/
-
-}
-#menu2 li a:link, #menu2 li a:visited
-{
-    display: block;
-    width:150px;
-    height:23px;
-    text-decoration:none;
-    color:black;
-    padding-left: 35px;
-    padding-top: 5px;
-    border-left:5px solid white;
-}
-#menu2 li a:hover
-{
-    display: block;
-    width:150px;
-    height:23px;
-    text-decoration:none;
-    color:black;
-    padding-left: 35px;
-    padding-top: 5px;
-    border-left:5px solid #EEEEEE;
-    background-color: #EEEEEE;
-}
-#menu2 li a.active:link, #menu2 li a.active:visited
-{
-    display: block;
-    width:150px;
-    height:23px;
-    text-decoration:none;
-    color:#DD4B39;
-    padding-left: 35px;
-    padding-top: 5px;
-    border-left:5px solid #DD4B39;
-}
-#menu2 li a.active:hover
-{
-    display: block;
-    width:150px;
-    height:23px;
-    text-decoration:none;
-    color:#DD4B39;
-    padding-left: 35px;
-    padding-top: 5px;
-    border-left:5px solid #DD4B39;
-    background-color: #EEEEEE;
+    li
+    {
+        width:181px;
+        height:30px;
+        font-size: 13px;
+        &a:link, &a:visited
+        {
+            display: block;
+            width:150px;
+            height:23px;
+            text-decoration:none;
+            color:black;
+            padding-left: 35px;
+            padding-top: 5px;
+            border-left:5px solid white;
+            a:hover
+            {
+                border-left:5px solid #EEEEEE;
+                background-color: #EEEEEE;
+            }
+        }
+        &a.active:link, &a.active:visited
+        {
+        color:#DD4B39;
+        border-left:5px solid #DD4B39;
+            a.active:hover
+            {
+                background-color: #EEEEEE;
+            }
+        }
+    }
 }
 #loc
 {
@@ -360,21 +285,15 @@ h2
 {
     color:#DD4B39;
     font-weight: bold;
-    font-size: 13px;
     margin-bottom: 5px;
 }
-a.left:link, a.left:visited
+a.left
 {
     text-decoration: none;
-    font-size: 13px;
     color:black;
-
-}
-a.left:hover
-{
-    text-decoration: underline;
-    font-size: 13px;
-    color:black;
+    a.left:hover{
+        text-decoration: underline;
+        }
 }
 .left
 {
@@ -401,10 +320,6 @@ a.left:hover
     margin-left: 29px;
     float:left;
 }
-#ad1
-{
-    font-size: 13px;
-}
 .HeadLink
 {
     font-size: 16px;
@@ -413,22 +328,18 @@ a.left:hover
 .adress
 {
     color: #009933;
-    font-size: 13px;
 }
-.sublink:link, .sublink:visited
+.sublink
 {
     text-decoration: none;
-    font-size: 13px;
+    .sublink:hover
+    {
+        text-decoration: underline;
+    }
 }
-.sublink:hover
-{
-    text-decoration: underline;
-    font-size: 13px;
-}
-#cont
+#cont, .cont
 {
     list-style-type: none;
-    font-size: 13px;
 }
 #cont li
 {
@@ -474,7 +385,6 @@ footer
 {
     width:28px;
     height:64px;
-    /*border: 1px solid red;*/
     float:left;
     background:url(img/g.gif);
     background-repeat:no-repeat;
@@ -493,11 +403,9 @@ footer
     background:url(img/oyel.gif);
     background-repeat:no-repeat;
 }
-
 .oText
 {
     text-align: center;
-    font-size: 13px;
     display: block;
     margin-top: 45px;
 }
@@ -514,7 +422,6 @@ footer
     width:110px;
     height:64px;
     float: left;
-    font-size: 13px;
     font-weight: bold;
     border: 0;
     background:url(img/gle.gif);
@@ -526,23 +433,18 @@ footer
     display:block;
     margin-top: 45px;
 }
-#ooo a:link, #ooo a:visited
+#ooo a:link
 {
     text-decoration: none;
     color:blue;
     border: 0;
-}
-#ooo a:active
-{
-    text-decoration: none;
-    color:#DD4B39;
-    border: 0;
-}
-#ooo a:hover
-{
-    text-decoration: underline;
-    color:blue;
-    border: 0;
+    #ooo a:active{
+        color:#DD4B39;
+    }
+    #ooo a:hover
+    {
+        text-decoration: underline;
+    }
 }
 #gle a:link, #gle a:visited
 {
@@ -556,10 +458,6 @@ footer
     color: #DD4B39;
     border: 0;
 }
-#gle img
-{
-    border:0;
-}
 .footer
 {
     width:490px;
@@ -567,17 +465,10 @@ footer
     float:left;
     display:inline-block;
     text-align:center;
-
-}
-.footer p
-{
-    font-size: 13px;
-    display:inline-block;
-    margin: auto 10px;
-}
-.footer a
-{
-    margin: auto 10px;
+    .footer p, .footer a
+    {
+        margin: auto 10px;
+    }
 }
 #more1 div
 {
@@ -591,30 +482,29 @@ footer
     left: 400px;
     display:none;
     background-color: white;
-
 }
-#more1:hover div
+@mixin hoverShadow
 {
     display:block;
     -moz-box-shadow: 0 0 3px 1px #c0c0c0;
     -webkit-box-shadow: 0 0 3px 1px #c0c0c0;
     box-shadow: 0 0 3px 1px #c0c0c0;
 }
+#more1:hover div
+{@include hoverShadow}
 .subMenu
 {
     display:block;
     border-bottom:1px solid #c0c0c0;
     padding: 10px 0px;
     background-color: white !important;
+    .subMenu li
+    {
+        width:110px;
+        background-color: white !important;
+    }
 }
-.subMenu li
-{
-    display:block;
-    width:110px;
-    background-color: white !important;
-
-}
-#moreDropdown li a:link, #moreDropdown li a:visited
+#moreDropdown li a
 {
     text-decoration:none;
     display:block;
@@ -624,17 +514,10 @@ footer
     margin:0;
     border:0;
     color:#3366CC !important;
-}
-#moreDropdown li a:hover
-{
-    text-decoration:none;
-    display:block;
-    width:90px;
-    background: #C4E5F6 !important;
-    border:0;
-    padding:5px 0 5px 20px;
-    margin:0 ;
-    color:#3366CC;
+    #moreDropdown li a:hover
+    {
+        background: #C4E5F6 !important;
+    }
 }
 #login div
 {
@@ -650,20 +533,15 @@ footer
     background-color: white;
 }
 #login:hover div
-{
-    display:block;
-    -moz-box-shadow: 0 0 3px 1px #c0c0c0;
-    -webkit-box-shadow: 0 0 3px 1px #c0c0c0;
-    box-shadow: 0 0 3px 1px #c0c0c0;
-}
+{@include hoverShadow}
 #loginMenuBottom
 {
     display:block;
-}
-#loginMenuBottom li
-{
-    display:inline;
-    list-style-type:none;
+    li
+    {
+        display:inline;
+        list-style-type:none;
+    }
 }
 #name
 {
@@ -676,7 +554,6 @@ footer
     margin-bottom: 5px;
     padding-left: 10px;
 }
-
 #logout
 {
     float:left;
@@ -688,7 +565,7 @@ footer
     text-align:left;
     padding-left:10px;
 }
-#loginMenu li a:link, #loginMenu li a:visited
+#loginMenu li a
 {
     text-decoration:none;
     display:block;
@@ -698,32 +575,21 @@ footer
     margin:0;
     border:0;
     color:#3366CC !important;
-}
-#loginMenu li a:hover
-{
-    text-decoration:none;
-    display:block;
-    width:200px;
-    background: #C4E5F6 !important;
-    border:0;
-    padding:5px 10px 5px 10px;
-    margin:0 ;
-    color:#3366CC;
+    #loginMenu li a:hover
+    {
+        background: #C4E5F6 !important;
+    }
 }
 #conf a:link, #conf a:visited, #conf a:hover
-{
-    width:150px !important;
-}
-#loginMenuBottom a:link, #loginMenuBottom a:visited
+{width:150px !important;}
+#loginMenuBottom a
 {
     text-decoration:none;
     padding:5px 10px 5px 10px;
     color:#3366CC !important;
     width: 50px;
+     a:hover
+    {
+        background: #C4E5F6 !important;
+    }
 }
-#loginMenuBottom a:hover
-{
-
-    background: #C4E5F6 !important;
-}
-
