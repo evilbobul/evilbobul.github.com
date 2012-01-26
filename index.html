@@ -111,63 +111,7 @@
                 <a href="#">Шукайте результати вибраною мовою: українська.</a>
                 Мову пошуку можна задати в меню <a href="#">Налаштування</a></p>
             <ul id="cont">
-                <script id="searchResult" type="text/x-jquery-tmpl">
-                        <li class="cont">
-                            <a href="#" class="HeadLink">{{html title}}</a>
-                            <span class="adress">{{html adress}}</span>
-                            {{html translate}}
-                            <p class="desc">{{html desc}}</p>
-                            {{each link}}
-                            <a href="#" class="sublink">${$value}</a> -
-                            {{/each}}
-                        </li>
-                </script>
-                <script type="text/javascript">
-                    var searchResult = [
-                        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
-                            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
-                            "translate": [],
-                            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
-                        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
-                            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
-                            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
-                            "link" :[] },
-                        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
-                            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
-                            "translate": [],
-                            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
-                        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
-                            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
-                            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
-                            "link" :[] },
-                        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
-                            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
-                            "translate": [],
-                            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
-                        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
-                            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
-                            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
-                            "link" :[] },
-                        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
-                            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
-                            "translate": [],
-                            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
-                        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
-                            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
-                            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
-                            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
-                            "link" :[] }
-                    ];
-                    $( "#searchResult" ).tmpl( searchResult )
-                            .appendTo( "#cont" );
-                </script>
+
             </ul>
         </div>
 
@@ -214,5 +158,74 @@
         <a href="http://www.google.com.ua" class="sublink">Усе про Google</a>
     </div>
 </footer>
+<script id="searchResult" type="text/x-jquery-tmpl">
+    <li class="cont">
+        <a href="#" class="HeadLink">{{html title}}</a>
+        <span class="adress">{{html adress}}</span>
+        {{html translate}}
+        <p class="desc">{{html desc}}</p>
+        {{each link}}
+        <a href="#" class="sublink">${$value}</a> -
+        {{/each}}
+    </li>
+</script>
+<script type="text/javascript">
+    var searchResult = [
+        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
+            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
+            "translate": [],
+            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
+        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
+            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
+            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
+            "link" :[] },
+        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
+            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
+            "translate": [],
+            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
+        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
+            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
+            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
+            "link" :[] }
+//        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
+//            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+//            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
+//            "translate": [],
+//            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
+//        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
+//            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+//            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
+//            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
+//            "link" :[] },
+//        {   "title": "<span class='highlighted'>HTML</span> — Вікіпедія",
+//            "adress": "uk.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+//            "desc": "<span class='highlighted'>HTML</span> (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...",
+//            "translate": [],
+//            "link" :["Історія розвитку HTML","Документ HTML","Поточні напрямки розвитку і ..."] },
+//        {   "title": "<span class='highlighted'>HTML</span> — Википедия",
+//            "adress": "ru.wikipedia.org/wiki/<span class='highlighted'>HTML</span>",
+//            "translate": ["<a href='#' class='sublink'> - Перекласти цю сторінку</a>"],
+//            "desc": "<span class='highlighted'>HTML</span>(от англ. HyperText Markup Language — «язык разметки гипертекста») — стандартный язык разметки документов во Всемирной паутине. ...",
+//            "link" :[] }
+    ];
+    $( "#searchResult" ).tmpl( searchResult )
+            .appendTo( "#cont" );
+</script>
+<script src="js/xslt.js"></script>
+<script>
+
+
+    XSLTransform (
+            "data.xml",
+            "template.xsl",
+            function (data){
+                document.body.appendChild(data);
+            }
+    )
+</script>
 </body>
 </html>
