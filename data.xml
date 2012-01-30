@@ -1,25 +1,23 @@
 <?xml version="1.0"?>
-<content>
-    <option>
-        <header>HTML Tutorial</header>
+<results>
+    <result id="translate">
+        <header><![CDATA[<span class="highlighted">HTML</span> Tutorial]]></header>
         <adress>www.w3schools.com/html/</adress>
-        <translation>Перекласти цю сторінку</translation>
-        <desc>Features short lessons and quizzes covering HTML as well as other markup languages. The latest standards are discussed, also.</desc>
-        <link>
-            <link1></link1>
-            <link2></link2>
-            <link3></link3>
-        </link>
-    </option>
-    <option>
+        <desc>Features short lessons and quizzes covering <span class="highlighted">HTML</span> as well as other markup languages. The latest standards are discussed, also.</desc>
+        <links>
+            <link></link>
+            <link></link>
+            <link></link>
+        </links>
+    </result>
+    <result>
         <header>HTML — Вікіпедія</header>
         <adress>uk.wikipedia.org/wiki/HTML</adress>
-        <translation></translation>
         <desc>HTML (англ. HyperText Markup Language — Мова розмітки гіпертексту) — стандартна мова розмітки документів у Всесвітній павутині. Більшість ...</desc>
-        <link>
-            <link1>Історія розвитку HTML</link1>
-            <link2>Документ HTML</link2>
-            <link3>Поточні напрямки розвитку і ...</link3>
-        </link>
-    </option>
-</content>
+        <links>
+            <link>Історія розвитку HTML</link>
+            <link>Документ HTML</link>
+            <link>Поточні напрямки розвитку і ...</link>
+        </links>
+    </result>
+</results>
