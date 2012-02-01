@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <results>
-    <result id="translate">
-        <header><![CDATA[<span class="highlighted">HTML</span> Tutorial]]></header>
+    <result translation="true">
+        <header><span class="highlighted">HTML</span> Tutorial</header>
         <adress>www.w3schools.com/html/</adress>
         <desc>Features short lessons and quizzes covering <span class="highlighted">HTML</span> as well as other markup languages. The latest standards are discussed, also.</desc>
         <links>
